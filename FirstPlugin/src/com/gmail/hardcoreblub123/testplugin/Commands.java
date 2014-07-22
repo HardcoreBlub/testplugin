@@ -13,10 +13,14 @@ public class Commands implements CommandExecutor {
 		if(sender instanceof Player){
 			p = (Player)sender;
 			if(cmd.getName().equalsIgnoreCase("Test")){
-				if(args.length == 0);
+				if(args.length == 0){
+					p.sendMessage(ChatColor.GREEN + "Plugin funktioniert");
+					return true;
+				}
+				return false;
 			}
-		p.sendMessage(ChatColor.GREEN + "Plugin funktioniert");
-		return true;
+		return false;
+	
 		}
 		return false;
 	}
